@@ -6,10 +6,12 @@ const btnPrim = document.getElementById('btnPrim');
 
 
 btnAdd.addEventListener('click', () => {
-    const li = document.createElement('li');
-    li.textContent=inputElemento.value;
-    lista.appendChild(li);
-    inputElemento.value="";
+    if(inputElemento.value != ""){
+        const li = document.createElement('li');
+        li.textContent=inputElemento.value;
+        lista.appendChild(li);
+        inputElemento.value="";
+    }
 });
 
 btnUlti.addEventListener('click', () => {
